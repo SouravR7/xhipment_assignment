@@ -22,6 +22,7 @@ function App() {
   let token = localStorage.getItem("user_token");
 
   console.log(user_data);
+  console.log(token);
 
   useEffect(() => {
     if (token && !email) {
