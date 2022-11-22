@@ -76,6 +76,13 @@ function Login() {
   const history = useNavigate();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    let token = localStorage.getItem("user_token");
+    if (token) {
+      history("/home");
+    }
+  }, []);
+
   // useEffect(() => {
   //   const keyDownHandler = (event) => {
   //     console.log("User pressed: ", event.key);
